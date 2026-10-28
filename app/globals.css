@@ -1,28 +1,167 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f4ee;
-  --foreground: #171512;
+  --paper: #fbf8f1;
+  --paper-subtle: #f4eee1;
+  --paper-dark: #eee6d3;
+  --paper-fold: #e6dfce;
+  --ink: #111111;
+  --ink-light: #2d2d2d;
+  --ink-muted: #555555;
+  --ink-subtle: #777777;
+  --crimson: #991b1b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --font-serif: "Times New Roman", Times, Georgia, "Baskerville", "Playfair Display", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "Courier New", Courier, monospace;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 ::selection {
-  background: #e0a85d;
-  color: #171512;
+  background-color: #111111;
+  color: #fbf8f1;
+}
+
+/* Authentic Newspaper Drop Cap */
+.drop-cap::first-letter {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  font-weight: 900;
+  color: #111111;
+}
+
+/* Tactile Paper Animation & Interactions */
+.paper-lift {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.paper-lift:hover {
+  transform: translateY(-3px) rotate(-0.25deg);
+  box-shadow: 6px 6px 0px #111111;
+}
+
+/* Paper Page Unfold Animation on Load */
+@keyframes paperUnfold {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.995);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-paper-unfold {
+  animation: paperUnfold 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3D Newspaper Opening Intro Sequence */
+@keyframes newspaperDropIn {
+  0% {
+    transform: translateY(-60px) rotate(-3deg) scale(0.92);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(4px) rotate(0.5deg) scale(1.01);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-newspaper-drop {
+  animation: newspaperDropIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Perforated Paper Tear Line */
+.paper-perforation {
+  background-image: linear-gradient(to right, #111111 55%, rgba(255, 255, 255, 0) 0%);
+  background-position: center;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  height: 2px;
+}
+
+/* Dog-ear Paper Corner Fold */
+.paper-folded-corner {
+  position: relative;
+}
+
+.paper-folded-corner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 18px 0;
+  border-color: transparent #111111 transparent transparent;
+  transition: border-width 0.2s ease;
+}
+
+.paper-folded-corner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 16px 16px 0;
+  border-color: transparent #f4eee1 transparent transparent;
+  transition: border-width 0.2s ease;
+}
+
+.paper-folded-corner:hover::before {
+  border-width: 0 24px 24px 0;
+}
+
+.paper-folded-corner:hover::after {
+  border-width: 0 22px 22px 0;
+}
+
+/* Fast, zero-lag keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Print perfection */
+@media print {
+  header, footer, .no-print, .paper-loader-overlay {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
 }
