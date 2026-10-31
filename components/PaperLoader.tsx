@@ -101,12 +101,12 @@ export default function PaperLoader() {
                 Muhamad Ariel Gunawan
               </h1>
               <div className="mt-2 mx-auto inline-block border-t border-b border-[#111] py-1 font-mono text-[10px] sm:text-[11px] font-bold text-[#111] px-4">
-                Full Stack Developer · Laravel &amp; Next.js
+                Software Engineer · Laravel, Next.js &amp; Python
               </div>
             </div>
 
             <p className="mt-3 font-serif text-xs italic text-center text-[#555]">
-              &ldquo;Clean backend, responsive frontend, certified networking foundation.&rdquo;
+              &ldquo;Clean Laravel backends, fast Next.js frontends, and AI features in real applications.&rdquo;
             </p>
           </div>
 
@@ -133,7 +133,7 @@ export default function PaperLoader() {
                   Core Stack
                 </span>
                 <span className="font-bold text-[#111] text-[11px]">
-                  Laravel · Next.js · PostgreSQL · MikroTik MTCNA
+                  Laravel · Next.js · PostgreSQL · Python · OpenRouter · Whisper
                 </span>
               </div>
 

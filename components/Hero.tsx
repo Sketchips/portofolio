@@ -21,7 +21,7 @@ export default function Hero() {
         {/* Editorial Masthead */}
         <div className="text-center border-b-4 border-[#111111] pb-4">
           <p className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.3em] text-[#555555]">
-            Full Stack Developer · Semarang, Indonesia
+            Software Engineer · Semarang, Indonesia
           </p>
           <h1 className="mt-1 font-serif text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-[#111111] uppercase leading-none">
             Muhamad Ariel<br className="hidden sm:block" /> Gunawan
@@ -33,7 +33,7 @@ export default function Hero() {
             <span className="text-[#111]/30">|</span>
             <span>PostgreSQL &amp; MySQL</span>
             <span className="text-[#111]/30">|</span>
-            <span className="font-bold text-[#991b1b]">MikroTik MTCNA 2026</span>
+            <span className="font-bold text-[#991b1b]">Python &amp; AI Integration</span>
           </div>
         </div>
 
@@ -58,21 +58,21 @@ export default function Hero() {
             </h2>
 
             <p className="mt-3 font-serif text-base sm:text-lg italic font-normal leading-relaxed text-justify text-[#444444]">
-              Clean Laravel backends, fast Next.js frontends, backed by a certified MikroTik MTCNA networking foundation.
+              Clean Laravel backends, fast Next.js frontends, and AI features in real applications.
             </p>
 
             <div className="mt-5 space-y-4 text-justify text-sm sm:text-base leading-relaxed text-[#222222]">
               <p className="drop-cap">
-                <strong>Semarang</strong> — I&apos;m a Full Stack Developer who works across the entire stack by designing relational database schemas, building secure RESTful APIs with Laravel, and connecting them to responsive Next.js or React interfaces that work across all devices.
+                <strong>Semarang</strong>, I&apos;m a Software Engineer who works across the stack by designing relational database schemas, building RESTful APIs with authentication, and connecting them to responsive Next.js or React interfaces that work across all devices.
               </p>
 
               <p>
-                My internship at <strong>BRIDA Kota Semarang (Regional Research and Innovation Agency)</strong> gave me real team experience — developing web application modules for a government institution, integrating frontend with backend REST endpoints, API testing with Postman, and collaborating through Git branching and pull requests.
+                My internship at <strong>Badan Riset dan Inovasi Daerah (BRIDA) Kota Semarang</strong> involved maintaining the official website and helping develop and deploy an Open Journal Systems website in a testing environment using Docker, GitHub, and SQL.
               </p>
             </div>
 
             <blockquote className="my-6 border-l-4 border-[#111111] bg-[#f4eee1] p-4 sm:p-5 font-serif text-base sm:text-lg italic leading-relaxed text-[#111111] paper-lift shadow-[3px_3px_0px_#111111]">
-              &ldquo;Normalized database schema, documented and secure API endpoints, clean code that&apos;s easy for a team to maintain and extend.&rdquo;
+              &ldquo;Clean, well-structured code and API endpoints that are easy for a team to read and maintain.&rdquo;
             </blockquote>
 
             <div className="paper-perforation my-5" />
@@ -116,7 +116,7 @@ export default function Hero() {
             </div>
           </article>
 
-          {/* Candidate Dossier — no Label: pattern */}
+          {/* Candidate Dossier, no label pattern */}
           <aside className="w-full">
             <div className="paper-folded-corner border-2 border-[#111111] bg-[#fbf8f1] p-5 sm:p-6 shadow-[5px_5px_0px_#111111] paper-lift">
               <div className="border-b-2 border-[#111111] pb-3 text-center">
@@ -128,7 +128,7 @@ export default function Hero() {
                 </h3>
               </div>
 
-              {/* Info cards — no colon pattern */}
+              {/* Info cards, no colon pattern */}
               <div className="mt-4 space-y-2 font-mono text-xs">
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#888] mb-0.5">Full Name</p>
@@ -157,7 +157,7 @@ export default function Hero() {
 
                 <div className="bg-[#f0fdf4] border border-[#15803d]/30 px-3 py-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#888] mb-0.5">Certification</p>
-                  <p className="font-bold text-[#15803d]">MikroTik MTCNA (2026)</p>
+                  <p className="font-bold text-[#15803d]">Software Engineer</p>
                 </div>
 
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">
@@ -172,7 +172,7 @@ export default function Hero() {
                   Core Stack
                 </p>
                 <div className="flex flex-wrap gap-1.5">
-                  {["PHP 8+", "Laravel", "REST API", "Next.js", "React", "TypeScript", "PostgreSQL", "MySQL", "Docker", "MikroTik"].map((sk) => (
+                  {["PHP 8+", "Laravel", "REST API", "Next.js", "React", "TypeScript", "Python", "PostgreSQL", "MySQL", "Docker"].map((sk) => (
                     <span
                       key={sk}
                       className="border border-[#111111] bg-[#f4eee1] px-2 py-0.5 font-mono text-[10px] font-bold text-[#111111]"

@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 bg-[#fbf8f1] border-b-2 border-[#111111]">
-      {/* 1. Top Dateline Bar — slim, dark, metadata only */}
+      {/* 1. Top Dateline Bar, slim metadata only */}
       <div className="bg-[#111111] text-[#fbf8f1] px-4 py-1 text-[10px] font-mono tracking-tight sm:px-6">
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           <div className="flex items-center gap-2 divide-x divide-white/20">
@@ -56,7 +56,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 2. Masthead: Brand name = "Portfolio" — clean, no duplication */}
+      {/* 2. Masthead, brand name is Portfolio */}
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:px-6">
         <a
           href="#headline"
@@ -67,7 +67,7 @@ export default function Navbar() {
             Portfolio
           </span>
           <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#666666] mt-0.5">
-            Full Stack Developer
+            Software Engineer
           </span>
         </a>
 
@@ -95,7 +95,7 @@ export default function Navbar() {
             href="#contact"
             className="whitespace-nowrap inline-flex items-center gap-1.5 border-2 border-[#111111] bg-[#111111] px-4 py-1.5 text-xs font-mono font-bold text-[#fbf8f1] shadow-[2px_2px_0px_#666] hover:bg-[#333] active:translate-x-px active:translate-y-px transition-all"
           >
-            <span>Send Offer</span>
+            <span>Contact Me</span>
             <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </div>
@@ -166,7 +166,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2 border-2 border-[#111111] bg-[#111111] py-2.5 text-xs font-mono font-bold text-[#fbf8f1]"
             >
-              <span>Send Job Offer</span>
+              <span>Contact Me</span>
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>

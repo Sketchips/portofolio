@@ -5,14 +5,13 @@ export interface Project {
   period: string;
   category: string;
   role: string;
+  teamSize: string;
   description: string;
   problem: string;
   solution: string;
   architecture: string;
   highlights: string[];
   stack: string[];
-  githubUrl?: string;
-  demoUrl?: string;
 }
 
 export interface ExperienceItem {
@@ -28,11 +27,7 @@ export interface ExperienceItem {
 
 export interface SkillGroup {
   category: string;
-  items: {
-    name: string;
-    level: "Core" | "Familiar";
-    context: string;
-  }[];
+  items: { name: string; level: "Core" | "Familiar"; context: string }[];
 }
 
 export const PERSONAL_INFO = {
@@ -40,13 +35,14 @@ export const PERSONAL_INFO = {
   nickName: "Ariel",
   initials: "MAG",
   githubHandle: "sketchips",
-  roleTitle: "Full Stack Developer",
-  specialization: "Laravel (REST API) & Next.js / React (Frontend)",
+  roleTitle: "Software Engineer",
+  specialization: "Laravel, Next.js, React, Python, and AI integration",
   location: "Semarang, Central Java, Indonesia",
   availability: "Open to Full-Time Roles (Immediately Available)",
   email: "smrgariel@gmail.com",
   githubUrl: "https://github.com/sketchips",
-  internshipCompany: "BRIDA Kota Semarang",
+  linkedinUrl: "https://linkedin.com/in/muhamad-ariel-gunawan-445105335",
+  internshipCompany: "Badan Riset dan Inovasi Daerah (BRIDA) Kota Semarang",
   certification: "MikroTik Certified Network Associate (MTCNA) - 2026",
 };
 
@@ -54,193 +50,180 @@ export const PROJECTS: Project[] = [
   {
     id: "lms-ai",
     title: "AI-Powered Learning Management System",
-    subtitle: "Platform Kursus Online dengan Video, Kuis, Group Chat, dan Fitur AI",
+    subtitle: "Online learning platform with group chat and AI features",
     period: "2026",
-    category: "Full Stack (Tugas Akhir)",
-    role: "Full Stack Developer",
-    description:
-      "Aplikasi LMS untuk manajemen user, kelas, materi, upload video, group chat, serta fitur AI untuk pembuatan soal otomatis, penilaian jawaban, dan speech-to-text.",
-    problem:
-      "Siswa perlu penjelasan cepat saat belajar mandiri, sementara instruktur butuh sistem upload materi dan pemantauan kuis yang rapi.",
-    solution:
-      "Backend REST API dengan Laravel dan PostgreSQL, frontend Next.js App Router, serta Python AI service untuk fitur pembuatan soal otomatis, penilaian jawaban, dan speech-to-text.",
+    category: "Full Stack (Final Project)",
+    role: "Full Stack Developer (Backend-Focused)",
+    teamSize: "Team of 2",
+    description: "An LMS with an admin dashboard, group chat, Excel export, and AI features for learning support.",
+    problem: "Students and instructors need one platform for course materials, quizzes, and learning support.",
+    solution: "Built the backend API and part of the frontend, then helped design, evaluate, and integrate AI features for automatic question generation, answer assessment, and speech-to-text.",
     architecture: "Next.js - Laravel REST API - PostgreSQL - Python AI service (OpenRouter, Whisper)",
     highlights: [
-      "Role-Based Access Control (Admin, Instruktur, Siswa) dengan izin akses berbeda.",
-      "Upload dan streaming video materi dengan validasi format dan ukuran file.",
-      "Group chat untuk mendukung komunikasi dalam proses pembelajaran.",
-      "Fitur AI untuk pembuatan soal otomatis, penilaian jawaban, dan speech-to-text yang saya ikut desain dan evaluasi.",
-      "Dashboard admin untuk mengelola user, kelas, materi, dan upload video.",
-      "Skema PostgreSQL ternormalisasi dengan foreign key dan indexing.",
+      "Admin dashboard for users, classes, materials, and video uploads.",
+      "Group chat for communication during the learning process.",
+      "Excel export for learning and assessment data.",
+      "AI features for automatic question generation, answer assessment, and speech-to-text, which I helped design and evaluate.",
     ],
-    stack: ["Laravel", "Next.js", "PostgreSQL", "RESTful API", "Tailwind CSS"],
+    stack: ["Laravel", "Next.js", "PostgreSQL", "Python", "OpenRouter", "Whisper"],
+  },
+  {
+    id: "distrac",
+    title: "DISTRAC",
+    subtitle: "AI-based public complaint distribution system",
+    period: "2026",
+    category: "AI & ML",
+    role: "QA, Backend, Proposal & Presentation",
+    teamSize: "Team project",
+    description: "An AI-based system for sorting and distributing public complaints to the appropriate sub-district government party.",
+    problem: "Public complaints need to be sorted and passed to the right party quickly.",
+    solution: "An AI-based system that sorts and distributes public complaints for sub-district government.",
+    architecture: "Next.js - Python",
+    highlights: [
+      "QA testing for the web application.",
+      "Backend contribution and support for the proposal, presentation, and poster.",
+      "2nd Place, Presentation and Demo, KMIPN VIII 2026.",
+    ],
+    stack: ["Next.js", "Python"],
+  },
+  {
+    id: "waste-detection",
+    title: "Waste Detection Mobile App",
+    subtitle: "CNN-based waste recognition for Flutter",
+    period: "2025",
+    category: "AI & ML",
+    role: "Team Contributor",
+    teamSize: "Team of 2",
+    description: "A mobile app project that recognizes waste from images using a CNN model trained in Python and used in Flutter.",
+    problem: "Waste needs to be recognized automatically from images.",
+    solution: "Trained a CNN model in Python to detect waste and used it in a Flutter mobile app.",
+    architecture: "Flutter app - CNN model (Python)",
+    highlights: ["Trained a CNN model for waste detection.", "Integrated the model into a Flutter mobile app."],
+    stack: ["Python", "CNN", "Flutter"],
+  },
+  {
+    id: "geosiaga-disaster",
+    title: "GeoSiaga",
+    subtitle: "Disaster reporting and evacuation shelter information",
+    period: "2025",
+    category: "Full Stack",
+    role: "Full Stack Developer",
+    teamSize: "Team of 3",
+    description: "A disaster reporting system with shelter information, a map, and a clear reporting workflow.",
+    problem: "Disaster reports need to be recorded and mapped clearly.",
+    solution: "A disaster reporting web app with a map, reporting workflow, and an evacuation shelter directory.",
+    // TODO-VERIFY: Confirm whether Leaflet and Tailwind CSS are confirmed project details.
+    architecture: "",
+    highlights: ["Disaster reporting workflow.", "Map-based presentation of disaster information.", "Evacuation shelter directory."],
+    stack: ["Laravel", "React", "MySQL", "REST API"],
+  },
+  {
+    id: "flexy-tourism",
+    title: "Flexy: Backend API for Tourism Ticketing",
+    subtitle: "RESTful API for a Flutter tourism ticketing app",
+    period: "2024",
+    category: "Backend & API",
+    role: "Backend Developer (Flutter Team Collaboration)",
+    teamSize: "Team of 8",
+    description: "Contributed to the backend REST API for a Flutter mobile tourism ticketing app.",
+    problem: "Tourism ticket booking was still manual and needed a system that could be used through a mobile app.",
+    solution: "Contributed to a Laravel REST API with Sanctum authentication for the Flutter mobile app, including QR payment (QR upload) and receipt printing from the app.",
+    // TODO-VERIFY: Confirm architecture details before publishing.
+    architecture: "",
+    highlights: ["Contributed to Sanctum authentication for the Flutter mobile app.", "Contributed to QR payment with QR upload.", "Contributed to receipt printing from the app.", "Backend was deployed to shared hosting."],
+    stack: ["Laravel", "MySQL", "REST API", "Sanctum"],
   },
   {
     id: "exam-management",
     title: "Online Examination Management System",
-    subtitle: "Manajemen Ujian Online dengan Laporan dan Ekspor Nilai",
+    subtitle: "Exam reports and Excel score export",
     period: "2025",
-    category: "Backend & Penilaian",
-    role: "Backend & Database Developer",
-    description:
-      "Aplikasi ujian online dengan laporan ujian dan fitur ekspor nilai ke Excel.",
-    problem:
-      "Laporan hasil ujian perlu disusun dengan rapi dan nilai perlu diekspor untuk kebutuhan administrasi.",
-    solution:
-      "Membangun laporan ujian dan fitur ekspor nilai ke Excel agar data hasil ujian lebih mudah digunakan.",
-    architecture: "Laravel - React - MySQL - Excel Export",
-    highlights: [
-      "Laporan ujian untuk membantu melihat hasil dan rekapitulasi peserta.",
-      "Ekspor nilai ke Excel untuk kebutuhan administrasi dan pengolahan data.",
-    ],
-    stack: ["Laravel", "React", "MySQL", "REST API", "Excel Export"],
-  },
-  {
-    id: "geosiaga-disaster",
-    title: "GeoSiaga - Sistem Pelaporan Bencana & GIS",
-    subtitle: "Aplikasi Pelaporan Titik Bencana dan Pemetaan Shelter Evakuasi",
-    period: "2024",
-    category: "Web GIS & Pelaporan",
+    category: "Full Stack",
     role: "Full Stack Developer",
-    description:
-      "Aplikasi web untuk pelaporan kejadian bencana oleh masyarakat secara langsung, visualisasi titik lokasi di peta interaktif, dan panduan shelter evakuasi terdekat.",
-    problem:
-      "Pelaporan bencana seringkali lambat terdata dan tidak memiliki koordinat lokasi yang presisi, sehingga petugas sulit memetakan area prioritas evakuasi.",
-    solution:
-      "Mengintegrasikan peta Leaflet untuk penentuan titik koordinat otomatis, alur verifikasi laporan oleh petugas, serta direktori shelter evakuasi beserta kapasitasnya.",
-    architecture: "React (Frontend) ↔ Leaflet GIS ↔ Laravel REST API ↔ MySQL",
-    highlights: [
-      "Peta interaktif Leaflet dengan penanda (marker) kategori bencana dan radius status darurat.",
-      "Formulir pelaporan warga disertai upload foto bukti dan deteksi titik koordinat GPS.",
-      "Katalog shelter evakuasi lengkap dengan informasi kapasitas, logistik, dan kontak petugas.",
-      "Halaman admin untuk memvalidasi laporan warga sebelum dipublikasikan ke peta umum.",
-    ],
-    stack: ["Laravel", "React", "Leaflet GIS", "MySQL", "REST API", "Tailwind CSS"],
-  },
-  {
-    id: "flexy-tourism",
-    title: "Flexy — Backend API Tiket Wisata",
-    subtitle: "RESTful API untuk Aplikasi Mobile Pemesanan Tiket Wisata",
-    period: "2024",
-    category: "Mobile Backend & API",
-    role: "Backend API Engineer (Kolaborasi Tim Flutter)",
-    description:
-      "Backend REST API untuk aplikasi mobile pemesanan tiket wisata dengan dukungan pembayaran QR dan cetak struk dari aplikasi.",
-    problem:
-      "Pemesanan tiket wisata masih manual dan butuh sistem yang bisa dipakai lewat aplikasi mobile.",
-    solution:
-      "Contributed to a RESTful API di Laravel dengan autentikasi Sanctum untuk aplikasi mobile Flutter, termasuk fitur pembayaran lewat QR (upload QR) dan cetak struk dari aplikasi.",
-    architecture: "Flutter Mobile - Laravel REST API (Sanctum) - MySQL",
-    highlights: [
-      "Autentikasi token aman berbasis Laravel Sanctum untuk aplikasi mobile.",
-      "Fitur pembayaran lewat QR dengan upload QR.",
-      "Fitur cetak struk dari aplikasi.",
-      "Kontribusi pada integrasi RESTful API dengan aplikasi mobile Flutter.",
-    ],
-    stack: ["Laravel", "MySQL", "RESTful API", "Laravel Sanctum", "Postman"],
+    teamSize: "Team of 8",
+    description: "A web-based examination system focused on exam reports and exporting scores to Excel.",
+    problem: "Exam results need clear reports and score data needs to be exported for administration.",
+    solution: "Built exam reports and Excel export for exam scores.",
+    // TODO-VERIFY: Confirm architecture details before publishing.
+    architecture: "",
+    highlights: ["Exam reports for reviewing participant results.", "Excel export for exam scores."],
+    stack: ["Laravel", "React", "MySQL", "REST API", "Excel Export"],
   },
 ];
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    period: "2024",
-    role: "Web Development Intern",
-    company: "BRIDA Kota Semarang (Regional Research and Innovation Agency)",
+    period: "September 2025 to January 2026",
+    role: "Web Developer (Intern)",
+    company: "Badan Riset dan Inovasi Daerah (BRIDA) Kota Semarang",
     location: "Semarang, Central Java",
     type: "Internship",
-    summary:
-      "Supported development and maintenance of internal web applications, integrated frontend with RESTful API backend, and managed regional research data.",
-    tasks: [
-      "Developed UI modules and CRUD flows for the institution's internal web system.",
-      "Connected frontend interfaces to REST API backend endpoints.",
-      "Tested API endpoints using Postman and fixed database queries.",
-      "Applied Git workflow (branching, pull requests, merges) within the dev team.",
-    ],
-    techStack: ["PHP", "Laravel", "JavaScript", "MySQL", "REST API", "Git", "Postman"],
+    summary: "Maintained the official BRIDA website and helped develop and deploy an Open Journal Systems website in a testing environment.",
+    tasks: ["Maintained the official BRIDA website.", "Helped develop and deploy an Open Journal Systems website in a testing environment.", "Used Docker, GitHub, and SQL during implementation, testing, and deployment.", "Collaborated with the team during implementation, testing, and deployment."],
+    techStack: ["Docker", "GitHub", "SQL", "Open Journal Systems"],
   },
   {
-    period: "2024 – 2026",
+    period: "2024 to 2026",
     role: "Full Stack Developer",
-    company: "Academic & Capstone Projects",
+    company: "Academic & Team Projects",
     location: "Semarang, Central Java",
-    type: "Team & Solo Projects",
-    summary:
-      "Designed and built several web applications from scratch, covering database schema design, API development, and user interface.",
-    tasks: [
-      "Designed normalized relational database schemas (PostgreSQL & MySQL).",
-      "Built RESTful APIs with token authentication and role-based access control.",
-      "Built responsive UIs using React and Next.js.",
-      "Set up application deployment on VPS servers and Docker containers.",
-    ],
+    type: "Team Projects",
+    summary: "Contributed to several web applications in team projects, covering API development, frontend, and database work.",
+    tasks: ["Built and contributed to RESTful APIs with authentication.", "Built responsive interfaces using React and Next.js.", "Worked on MySQL and PostgreSQL database tasks.", "Deployed backend to shared hosting and used Docker."],
     techStack: ["Laravel", "Next.js", "React", "TypeScript", "PostgreSQL", "Docker", "Linux VPS"],
   },
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [
-  {
-    category: "Backend & API",
-    items: [
-      { name: "PHP", level: "Core", context: "Object-oriented PHP 8+, clean architecture" },
-      { name: "Laravel", level: "Core", context: "Eloquent ORM, Middleware, Routing, REST API" },
-      { name: "RESTful API", level: "Core", context: "Endpoint design, status codes, JSON integration" },
-      { name: "Authentication", level: "Core", context: "Laravel Sanctum (token), Session, role-based access" },
-      { name: "Postman", level: "Core", context: "API endpoint testing and documentation" },
-    ],
-  },
-  {
-    category: "Frontend & UI",
-    items: [
-      { name: "React", level: "Core", context: "Functional components, custom hooks, modular UI" },
-      { name: "Next.js", level: "Core", context: "App Router, Server & Client Components, dynamic routing" },
-      { name: "TypeScript", level: "Familiar", context: "Type definitions, interfaces, and API contracts" },
-      { name: "Tailwind CSS", level: "Core", context: "Utility-first styling and responsive layouts" },
-      { name: "HTML5 & CSS3", level: "Core", context: "Semantic structure and accessible UI" },
-    ],
-  },
-  {
-    category: "Database",
-    items: [
-      { name: "PostgreSQL", level: "Core", context: "Relational queries, indexing, foreign key relations" },
-      { name: "MySQL", level: "Core", context: "Schema normalization, ACID transactions, JOIN queries" },
-      { name: "Database Design", level: "Core", context: "ERD design, migrations, and seed data" },
-    ],
-  },
-  {
-    category: "Server & Networking",
-    items: [
-      { name: "MikroTik MTCNA", level: "Core", context: "Certified 2026: routing, firewall NAT, queues" },
-      { name: "Docker", level: "Familiar", context: "Basic containerization with Dockerfile" },
-      { name: "Git & GitHub", level: "Core", context: "Branching, conventional commits, pull requests" },
-      { name: "Linux VPS", level: "Familiar", context: "Server setup basics, Nginx, app deployment" },
-    ],
-  },
+  { category: "Frontend & UI", items: [
+    { name: "JavaScript", level: "Core", context: "Web application development" },
+    { name: "TypeScript", level: "Core", context: "Type-safe application development" },
+    { name: "React", level: "Core", context: "Functional components and modular UI" },
+    { name: "Next.js", level: "Core", context: "Modern full stack web applications" },
+    { name: "Flutter", level: "Familiar", context: "Mobile application integration" },
+    { name: "Responsive Web Design", level: "Core", context: "Responsive layouts across devices" },
+  ] },
+  { category: "Backend & API", items: [
+    { name: "PHP", level: "Core", context: "Backend application development" },
+    { name: "Laravel", level: "Core", context: "REST API and web application development" },
+    { name: "REST API", level: "Core", context: "API design and integration" },
+    { name: "Authentication", level: "Core", context: "Authentication and access control" },
+    // TODO-VERIFY: Confirm RBAC as a skill before publishing.
+    { name: "RBAC", level: "Familiar", context: "Role-based access control" },
+  ] },
+  { category: "AI", items: [
+    { name: "Python", level: "Core", context: "AI service and model development" },
+    { name: "CNN", level: "Core", context: "Waste detection model" },
+    { name: "LLM API Integration", level: "Core", context: "Gemini and LLaMA via OpenRouter" },
+    { name: "Whisper", level: "Core", context: "Speech-to-text integration" },
+  ] },
+  { category: "Database & Tools", items: [
+    { name: "MySQL", level: "Core", context: "Relational database work" },
+    { name: "PostgreSQL", level: "Core", context: "Relational database work" },
+    { name: "SQL", level: "Core", context: "Queries and database tasks" },
+    { name: "Database Design", level: "Core", context: "Database structure and relationships" },
+    { name: "Git & GitHub", level: "Core", context: "Version control and collaboration" },
+    { name: "Docker", level: "Core", context: "Development and testing environments" },
+    { name: "Postman", level: "Core", context: "API testing" },
+    { name: "VS Code", level: "Core", context: "Development environment" },
+    { name: "Figma", level: "Familiar", context: "Interface design" },
+    { name: "DigitalOcean VPS", level: "Familiar", context: "Basic server deployment" },
+    { name: "SSH", level: "Familiar", context: "Remote server access" },
+    { name: "Nginx", level: "Familiar", context: "Web server basics" },
+    { name: "Vercel", level: "Familiar", context: "Web deployment" },
+  ] },
 ];
 
-export const CERTIFICATIONS = [
-  {
-    title: "MikroTik Certified Network Associate (MTCNA)",
-    issuer: "MikroTik Ltd.",
-    year: "2026",
-    description:
-      "Official international certification for MikroTik RouterOS configuration (2026): static & dynamic routing, Firewall NAT, Bandwidth Management (Queues), and network troubleshooting.",
-    skills: ["RouterOS", "Firewall NAT", "Static Routing", "Traffic Queues", "IPv4 Subnetting"],
-  },
-];
+export const CERTIFICATIONS = [{
+  title: "MikroTik Certified Network Associate (MTCNA)",
+  issuer: "MikroTik Ltd.",
+  year: "2026",
+  description: "Official certification covering MikroTik RouterOS basics: routing, firewall NAT, queues, and basic network troubleshooting.",
+  skills: ["RouterOS Basics", "Routing", "Firewall NAT", "Queues", "Basic Troubleshooting"],
+}];
 
 export const RECRUITER_FAQS = [
-  {
-    question: "When are you available to start?",
-    answer:
-      "I'm immediately available. Open to on-site positions in the Semarang area, hybrid, or fully remote.",
-  },
-  {
-    question: "What role and position fits best?",
-    answer:
-      "Full Stack Developer or Backend Developer (Laravel / PHP). I have experience designing relational databases, building secure RESTful APIs, building modern Next.js/React interfaces, and hold an MikroTik MTCNA networking certification.",
-  },
-  {
-    question: "What was your internship at BRIDA Kota Semarang like?",
-    answer:
-      "During my internship at BRIDA Kota Semarang (Regional Research and Innovation Agency), I was directly involved in developing modules for an internal government web application, integrating REST API backend with the frontend, testing endpoints with Postman, and collaborating via Git workflow.",
-  },
+  { question: "When are you available to start?", answer: "I am immediately available for on-site, hybrid, or remote roles." },
+  { question: "What role and position fits best?", answer: "Software Engineer, with a focus on full stack development, backend systems, and AI integration." },
+  { question: "What was your BRIDA internship like?", answer: "As a Web Developer Intern at Badan Riset dan Inovasi Daerah (BRIDA) Kota Semarang from September 2025 to January 2026, I maintained the official website and helped develop and deploy an Open Journal Systems website in a testing environment using Docker, GitHub, and SQL." },
 ];

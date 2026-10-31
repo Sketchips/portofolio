@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PROJECTS, Project } from "@/data/portfolio-data";
+import { PROJECTS } from "@/data/portfolio-data";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Projects() {
@@ -12,6 +12,7 @@ export default function Projects() {
     if (filter === "all") return true;
     if (filter === "fullstack") return p.category.toLowerCase().includes("full stack") || p.category.toLowerCase().includes("gis");
     if (filter === "backend") return p.category.toLowerCase().includes("backend") || p.category.toLowerCase().includes("penilaian");
+    if (filter === "ai") return p.category.toLowerCase().includes("ai") || p.category.toLowerCase().includes("ml");
     return true;
   });
 
@@ -42,6 +43,7 @@ export default function Projects() {
               { id: "all", label: "ALL PROJECTS" },
               { id: "fullstack", label: "FULL STACK" },
               { id: "backend", label: "BACKEND & API" },
+              { id: "ai", label: "AI & ML" },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -79,6 +81,8 @@ export default function Projects() {
                     <span className="text-[#991b1b]">{project.period}</span>
                     <span>•</span>
                     <span>{project.category.toUpperCase()}</span>
+                    <span>•</span>
+                    <span>{project.teamSize.toUpperCase()}</span>
                   </div>
 
                   <span className="font-mono text-xs font-semibold text-[#333333] border border-[#111111]/30 bg-[#f4eee1] px-2 py-0.5 self-start sm:self-auto">
@@ -95,12 +99,14 @@ export default function Projects() {
                 </p>
 
                 {/* Architecture Banner */}
-                <div className="mt-4 border border-[#111111] bg-[#f4eee1] p-3 font-mono text-xs">
-                  <span className="font-bold text-[#111111] block sm:inline mr-2">
-                    ARCHITECTURE:
-                  </span>
-                  <span className="text-[#333333]">{project.architecture}</span>
-                </div>
+                {project.architecture && (
+                  <div className="mt-4 border border-[#111111] bg-[#f4eee1] p-3 font-mono text-xs">
+                    <span className="font-bold text-[#111111] block sm:inline mr-2">
+                      ARCHITECTURE
+                    </span>
+                    <span className="text-[#333333]">{project.architecture}</span>
+                  </div>
+                )}
 
                 {/* Problem vs Solution */}
                 <div className="mt-5 grid gap-4 md:grid-cols-2 border-t border-b border-[#111111]/30 py-4 font-sans text-xs sm:text-sm">

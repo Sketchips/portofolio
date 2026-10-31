@@ -23,7 +23,7 @@ export default function Experience() {
             Experience &amp; Projects
           </h2>
           <p className="mt-2 font-serif text-base sm:text-lg italic text-[#444444] max-w-2xl">
-            Real-world experience from a government agency internship and leading development on team projects.
+            Internship experience and contributions to team projects.
           </p>
         </div>
 

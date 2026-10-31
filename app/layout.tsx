@@ -9,20 +9,20 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Muhamad Ariel Gunawan | Full Stack Developer (Laravel & Next.js)",
+  title: "Software Engineer | Muhamad Ariel Gunawan",
   description:
-    "Portfolio Muhamad Ariel Gunawan - Full Stack Developer spesialisasi backend Laravel RESTful API, frontend Next.js/React, perancangan database PostgreSQL/MySQL, dan sertifikasi jaringan MikroTik MTCNA.",
+    "Portfolio Muhamad Ariel Gunawan, Software Engineer focused on full stack web development and AI integration.",
   keywords: [
     "Muhamad Ariel Gunawan",
     "Ariel Gunawan",
     "sketchips",
-    "Full Stack Developer Indonesia",
-    "Laravel Developer Semarang",
+    "Software Engineer",
+    "Python AI Integration",
     "Next.js Developer",
     "Backend Developer",
     "RESTful API",
     "PostgreSQL",
-    "MikroTik MTCNA",
+    "AI Integration",
     "Web Developer Semarang",
   ],
   authors: [{ name: "Muhamad Ariel Gunawan", url: "https://github.com/sketchips" }],
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://sketchips.github.io",
-    title: "Muhamad Ariel Gunawan | Full Stack Developer",
+    title: "Software Engineer",
     description:
-      "Full Stack Developer dengan keahlian Laravel, Next.js, RESTful API, PostgreSQL, dan infrastruktur jaringan bersertifikat MikroTik MTCNA.",
+      "Software Engineer dengan keahlian Laravel, Next.js, React, Python, dan AI integration.",
     siteName: "Portfolio Muhamad Ariel Gunawan",
   },
   icons: {

@@ -83,7 +83,7 @@ export default function Skills() {
           </div>
 
           <p className="mt-4 font-sans text-xs sm:text-sm text-[#333333] leading-relaxed max-w-4xl">
-            Official international certification covering MikroTik RouterOS configuration — static &amp; dynamic routing, Firewall NAT, Bandwidth Management (Queues), and network troubleshooting. This networking foundation supports my work managing inter-service communication, DNS and routing config, and Linux VPS maintenance (Nginx and Docker).
+            Official certification covering MikroTik RouterOS basics: routing, firewall NAT, queues, and basic network troubleshooting.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2 pt-2 border-t border-[#111111]/20 font-mono text-xs">

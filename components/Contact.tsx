@@ -23,10 +23,10 @@ export default function Contact() {
               Contact &amp; Correspondence
             </span>
             <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-[#111111]">
-              Send a Job Offer
+              Contact Me
             </h2>
             <p className="mt-2 font-serif text-base sm:text-lg italic text-[#444444] max-w-2xl">
-              Open to full-time roles as a Full Stack or Backend Developer. Ready to join your engineering team immediately.
+              Open to software engineering roles focused on full stack development and AI integration.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function Contact() {
                 <p className="text-[#666666] text-[10px] uppercase tracking-widest mb-1">Location</p>
                 <p className="font-bold text-[#111111] text-base">Semarang, Central Java, Indonesia</p>
                 <p className="text-[11px] text-[#555555] mt-0.5">
-                  Open to on-site (Semarang area), hybrid, or full remote.
+                  Open to on-site, hybrid, or remote.
                 </p>
               </div>
 
@@ -62,7 +62,7 @@ export default function Contact() {
                   Get in Touch
                 </span>
                 <h3 className="mt-1 font-serif text-xl sm:text-2xl font-black text-[#111111]">
-                  Contact Ariel Directly
+                  Contact Me Directly
                 </h3>
                 <p className="mt-2 font-sans text-xs text-[#444444] leading-relaxed">
                   Send an interview invitation or copy the email address to forward to your HR team or tech lead.
@@ -107,6 +107,15 @@ export default function Contact() {
                 >
                   <GithubIcon className="h-4 w-4" />
                   <span>GITHUB @sketchips</span>
+                </a>
+
+                <a
+                  href={PERSONAL_INFO.linkedinUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="whitespace-nowrap flex items-center justify-center gap-2 border-2 border-[#111111] bg-[#fbf8f1] py-3 text-center font-bold text-[#111111] shadow-[3px_3px_0px_#111111] hover:bg-[#eee6d3] active:translate-x-0.5 active:translate-y-0.5 transition-transform"
+                >
+                  <span>LINKEDIN</span>
                 </a>
               </div>
             </div>
