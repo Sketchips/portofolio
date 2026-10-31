@@ -54,22 +54,23 @@ export const PROJECTS: Project[] = [
   {
     id: "lms-ai",
     title: "AI-Powered Learning Management System",
-    subtitle: "Platform Kursus Online dengan Video, Kuis, dan Asisten Belajar",
+    subtitle: "Platform Kursus Online dengan Video, Kuis, Group Chat, dan Fitur AI",
     period: "2026",
     category: "Full Stack (Tugas Akhir)",
     role: "Full Stack Developer",
     description:
-      "Aplikasi LMS untuk manajemen kelas, materi video, kuis pilihan ganda, dan asisten belajar berbasis AI yang menjawab pertanyaan siswa sesuai bab yang sedang dibuka.",
+      "Aplikasi LMS untuk manajemen user, kelas, materi, upload video, group chat, serta fitur AI untuk pembuatan soal otomatis, penilaian jawaban, dan speech-to-text.",
     problem:
       "Siswa perlu penjelasan cepat saat belajar mandiri, sementara instruktur butuh sistem upload materi dan pemantauan kuis yang rapi.",
     solution:
-      "Backend REST API dengan Laravel dan PostgreSQL, frontend Next.js App Router, serta integrasi LLM API dengan konteks berdasarkan modul aktif.",
-    architecture: "Next.js ↔ Laravel REST API ↔ PostgreSQL ↔ LLM API",
+      "Backend REST API dengan Laravel dan PostgreSQL, frontend Next.js App Router, serta Python AI service untuk fitur pembuatan soal otomatis, penilaian jawaban, dan speech-to-text.",
+    architecture: "Next.js - Laravel REST API - PostgreSQL - Python AI service (OpenRouter, Whisper)",
     highlights: [
       "Role-Based Access Control (Admin, Instruktur, Siswa) dengan izin akses berbeda.",
       "Upload dan streaming video materi dengan validasi format dan ukuran file.",
-      "Asisten belajar berbasis konteks bab aktif — bukan chatbot generik.",
-      "Dashboard admin: rekap kuis, progres siswa per kursus.",
+      "Group chat untuk mendukung komunikasi dalam proses pembelajaran.",
+      "Fitur AI untuk pembuatan soal otomatis, penilaian jawaban, dan speech-to-text yang saya ikut desain dan evaluasi.",
+      "Dashboard admin untuk mengelola user, kelas, materi, dan upload video.",
       "Skema PostgreSQL ternormalisasi dengan foreign key dan indexing.",
     ],
     stack: ["Laravel", "Next.js", "PostgreSQL", "RESTful API", "Tailwind CSS"],
@@ -77,25 +78,22 @@ export const PROJECTS: Project[] = [
   {
     id: "exam-management",
     title: "Online Examination Management System",
-    subtitle: "Manajemen Ujian Online dengan Koreksi Otomatis & Ekspor Nilai",
+    subtitle: "Manajemen Ujian Online dengan Laporan dan Ekspor Nilai",
     period: "2025",
     category: "Backend & Penilaian",
     role: "Backend & Database Developer",
     description:
-      "Aplikasi ujian online dengan timer tersinkronisasi server, auto-save jawaban, koreksi otomatis soal pilihan ganda, dan ekspor nilai ke PDF & Excel.",
+      "Aplikasi ujian online dengan laporan ujian dan fitur ekspor nilai ke Excel.",
     problem:
-      "Timer di sisi browser mudah dimanipulasi, jawaban bisa hilang saat koneksi putus, dan rekap nilai manual memakan waktu.",
+      "Laporan hasil ujian perlu disusun dengan rapi dan nilai perlu diekspor untuk kebutuhan administrasi.",
     solution:
-      "Timer dikendalikan token sesi di server, auto-save setiap pilihan jawaban, kalkulasi nilai otomatis, dan generator laporan siap cetak.",
-    architecture: "Laravel ↔ React / Blade ↔ MySQL ↔ DomPDF & Excel Export",
+      "Membangun laporan ujian dan fitur ekspor nilai ke Excel agar data hasil ujian lebih mudah digunakan.",
+    architecture: "Laravel - React - MySQL - Excel Export",
     highlights: [
-      "Timer ujian tersinkronisasi server untuk mencegah manipulasi waktu di inspect element browser.",
-      "Penyimpanan otomatis (auto-save) jawaban setiap kali peserta memilih opsi.",
-      "Koreksi otomatis untuk soal pilihan ganda dengan bobot nilai fleksibel per mata pelajaran.",
-      "Fitur ekspor rekapitulasi nilai ke format Excel (XLS) dan cetak lembar hasil format PDF.",
-      "Acak urutan soal dan pilihan jawaban untuk meminimalkan kecurangan.",
+      "Laporan ujian untuk membantu melihat hasil dan rekapitulasi peserta.",
+      "Ekspor nilai ke Excel untuk kebutuhan administrasi dan pengolahan data.",
     ],
-    stack: ["Laravel", "React", "MySQL", "DomPDF", "Excel Export", "REST API"],
+    stack: ["Laravel", "React", "MySQL", "REST API", "Excel Export"],
   },
   {
     id: "geosiaga-disaster",
@@ -127,18 +125,17 @@ export const PROJECTS: Project[] = [
     category: "Mobile Backend & API",
     role: "Backend API Engineer (Kolaborasi Tim Flutter)",
     description:
-      "Backend REST API untuk aplikasi mobile pemesanan tiket wisata: manajemen kuota harian, transaksi pemesanan, dan validasi tiket barcode di pintu gerbang.",
+      "Backend REST API untuk aplikasi mobile pemesanan tiket wisata dengan dukungan pembayaran QR dan cetak struk dari aplikasi.",
     problem:
-      "Antrean tiket manual dan risiko overbooking jika checkout bersamaan tidak ditangani di level database.",
+      "Pemesanan tiket wisata masih manual dan butuh sistem yang bisa dipakai lewat aplikasi mobile.",
     solution:
-      "RESTful API di Laravel dengan DB Transactions saat pengurangan kuota, endpoint barcode scan cepat, dan otentikasi Sanctum untuk mobile.",
-    architecture: "Flutter Mobile ↔ Laravel REST API (Sanctum) ↔ MySQL",
+      "Contributed to a RESTful API di Laravel dengan autentikasi Sanctum untuk aplikasi mobile Flutter, termasuk fitur pembayaran lewat QR (upload QR) dan cetak struk dari aplikasi.",
+    architecture: "Flutter Mobile - Laravel REST API (Sanctum) - MySQL",
     highlights: [
       "Autentikasi token aman berbasis Laravel Sanctum untuk aplikasi mobile.",
-      "Transaksi basis data (DB Transactions) saat pemotongan kuota untuk mencegah overbooking.",
-      "Endpoint verifikasi kode barcode tiket saat pengunjung masuk di pintu gerbang.",
-      "Dokumentasi API lengkap di Postman untuk mempermudah integrasi dengan developer mobile Flutter.",
-      "Dashboard admin sederhana untuk memantau jumlah pengunjung dan total penjualan tiket harian.",
+      "Fitur pembayaran lewat QR dengan upload QR.",
+      "Fitur cetak struk dari aplikasi.",
+      "Kontribusi pada integrasi RESTful API dengan aplikasi mobile Flutter.",
     ],
     stack: ["Laravel", "MySQL", "RESTful API", "Laravel Sanctum", "Postman"],
   },
@@ -214,7 +211,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: "MikroTik MTCNA", level: "Core", context: "Certified 2026: routing, firewall NAT, queues" },
       { name: "Docker", level: "Familiar", context: "Basic containerization with Dockerfile" },
       { name: "Git & GitHub", level: "Core", context: "Branching, conventional commits, pull requests" },
-      { name: "Linux VPS", level: "Familiar", context: "Ubuntu server basics, Nginx, app deployment" },
+      { name: "Linux VPS", level: "Familiar", context: "Server setup basics, Nginx, app deployment" },
     ],
   },
 ];
