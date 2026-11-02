@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { EXPERIENCES, RECRUITER_FAQS } from "@/data/portfolio-data";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 export default function Experience() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -138,18 +138,24 @@ export default function Experience() {
                       className="flex w-full items-center justify-between p-4 text-left font-serif font-black text-sm sm:text-base text-[#111111] hover:bg-[#eee6d3] transition"
                     >
                       <span>{faq.question}</span>
-                      {isOpen ? (
-                        <ChevronUp className="h-4 w-4 shrink-0 text-[#111111]" />
-                      ) : (
-                        <ChevronDown className="h-4 w-4 shrink-0 text-[#111111]" />
-                      )}
+                      <ChevronDown
+                        className={`h-4 w-4 shrink-0 text-[#111111] transition-transform duration-300 ${
+                          isOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      />
                     </button>
 
-                    {isOpen && (
-                      <div className="border-t border-[#111111]/20 bg-[#fbf8f1] p-4 text-xs sm:text-sm text-[#333333] leading-relaxed">
-                        {faq.answer}
+                    <div
+                      className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="min-h-0 overflow-hidden">
+                        <div className="border-t border-[#111111]/20 bg-[#fbf8f1] p-4 text-xs leading-relaxed text-[#333333] sm:text-sm">
+                          {faq.answer}
+                        </div>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}

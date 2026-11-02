@@ -65,7 +65,7 @@ export default function Contact() {
                   Contact Me Directly
                 </h3>
                 <p className="mt-2 font-sans text-xs text-[#444444] leading-relaxed">
-                  Send an interview invitation or copy the email address to forward to your HR team or tech lead.
+                  Contact me for an interview or copy my email address.
                 </p>
               </div>
 
