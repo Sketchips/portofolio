@@ -67,7 +67,7 @@ export default function Skills() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b-2 border-[#111111] pb-4">
             <div>
               <span className="bg-[#111111] text-[#fbf8f1] px-2 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest">
-                Official Certification
+                Certification
               </span>
               <h3 className="mt-2 font-serif text-2xl sm:text-3xl font-black uppercase tracking-tight text-[#111111]">
                 {CERTIFICATIONS[0].title}

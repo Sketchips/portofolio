@@ -116,7 +116,7 @@ export default function Experience() {
           <div className="paper-lift border-2 border-[#111111] bg-[#fbf8f1] p-6 sm:p-8 shadow-[5px_5px_0px_#111111]">
             <div className="border-b-2 border-[#111111] pb-3">
               <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#991b1b]">
-                Recruiter Guide
+                Before You Contact Me
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl font-black text-[#111111] uppercase">
                 Frequently Asked Questions

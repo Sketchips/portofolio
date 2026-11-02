@@ -50,7 +50,7 @@ export default function Hero() {
           {/* Lead Story */}
           <article className="border-b lg:border-b-0 lg:border-r border-[#111111]/20 pb-8 lg:pb-0 lg:pr-10">
             <span className="inline-block bg-[#111111] text-[#fbf8f1] px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest">
-              Profile &amp; Specialization
+                Profile &amp; Focus
             </span>
 
             <h2 className="mt-3 font-serif text-2xl sm:text-3xl md:text-4xl font-black leading-[1.1] tracking-tight text-[#111111]">
@@ -121,7 +121,7 @@ export default function Hero() {
             <div className="paper-folded-corner border-2 border-[#111111] bg-[#fbf8f1] p-5 sm:p-6 shadow-[5px_5px_0px_#111111] paper-lift">
               <div className="border-b-2 border-[#111111] pb-3 text-center">
                 <span className="font-mono text-[9px] uppercase tracking-widest text-[#777]">
-                  Candidate Summary
+                  Profile
                 </span>
                 <h3 className="font-serif text-xl sm:text-2xl font-black text-[#111111] uppercase tracking-tight mt-0.5">
                   Quick Profile
@@ -190,7 +190,7 @@ export default function Hero() {
                   className="flex w-full items-center justify-center gap-2 border-2 border-[#111111] bg-[#111111] py-3 font-mono text-xs font-bold text-[#fbf8f1] shadow-[3px_3px_0px_#555] hover:bg-[#333] active:translate-x-px active:translate-y-px active:shadow-none transition-all"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>Contact for Interview</span>
+                  <span>Contact Me</span>
                 </a>
               </div>
             </div>

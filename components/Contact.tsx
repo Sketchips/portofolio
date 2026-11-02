@@ -20,7 +20,7 @@ export default function Contact() {
         <div className="paper-lift paper-folded-corner border-4 border-[#111111] bg-[#fbf8f1] p-6 sm:p-10 md:p-12 shadow-[8px_8px_0px_#111111]">
           <div className="border-b-2 border-[#111111] pb-5">
             <span className="bg-[#111111] text-[#fbf8f1] px-2 py-0.5 font-mono text-[11px] font-bold uppercase tracking-widest">
-              Contact &amp; Correspondence
+              Get in Touch
             </span>
             <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-[#111111]">
               Contact Me
