@@ -142,12 +142,12 @@ export default function Hero() {
 
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#888] mb-0.5">Target Role</p>
-                  <p className="font-bold text-[#111]">Full Stack / Backend Developer</p>
+                  <p className="font-bold text-[#111]">Software Engineer</p>
                 </div>
 
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#888] mb-0.5">Experience</p>
-                  <p className="font-bold text-[#111]">BRIDA Kota Semarang (Internship)</p>
+                  <p className="font-bold text-[#111]">BRIDA Kota Semarang, Web Developer Intern</p>
                 </div>
 
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">
@@ -157,7 +157,7 @@ export default function Hero() {
 
                 <div className="bg-[#f0fdf4] border border-[#15803d]/30 px-3 py-2">
                   <p className="text-[9px] uppercase tracking-widest text-[#888] mb-0.5">Certification</p>
-                  <p className="font-bold text-[#15803d]">Software Engineer</p>
+                  <p className="font-bold text-[#15803d]">MTCNA Certified, 2026</p>
                 </div>
 
                 <div className="bg-[#f4eee1] border border-[#111111]/20 px-3 py-2">

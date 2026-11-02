@@ -27,6 +27,31 @@ export default function Experience() {
           </p>
         </div>
 
+        <div id="education" className="mt-8 scroll-mt-20">
+          <article className="paper-lift border-2 border-[#111111] bg-[#fbf8f1] p-6 sm:p-8 shadow-[5px_5px_0px_#111111]">
+            <div className="flex flex-col gap-3 border-b border-[#111111] pb-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <span className="font-mono text-xs font-bold uppercase text-[#991b1b]">
+                  Education
+                </span>
+                <h3 className="mt-1 font-serif text-2xl font-black text-[#111111] sm:text-3xl">
+                  D3 Teknik Informatika
+                </h3>
+                <p className="mt-1 font-serif text-base font-bold text-[#333333]">
+                  Politeknik Negeri Semarang
+                </p>
+              </div>
+              <div className="font-mono text-xs text-[#555555] sm:text-right">
+                <span className="block">2023 to 2026</span>
+                <span className="mt-1 block font-bold text-[#15803d]">GPA 3.73 / 4.00</span>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-[#333333] sm:text-base">
+              Studied software development, databases, web application development, and applied computing through individual and team projects.
+            </p>
+          </article>
+        </div>
+
         {/* Experience Cards */}
         <div className="mt-8 space-y-6">
           {EXPERIENCES.map((exp, idx) => (

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Portfolio Muhamad Ariel Gunawan",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 };
 

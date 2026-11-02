@@ -112,7 +112,6 @@ export const PROJECTS: Project[] = [
     description: "A disaster reporting system with shelter information, a map, and a clear reporting workflow.",
     problem: "Disaster reports need to be recorded and mapped clearly.",
     solution: "A disaster reporting web app with a map, reporting workflow, and an evacuation shelter directory.",
-    // TODO-VERIFY: Confirm whether Leaflet and Tailwind CSS are confirmed project details.
     architecture: "",
     highlights: ["Disaster reporting workflow.", "Map-based presentation of disaster information.", "Evacuation shelter directory."],
     stack: ["Laravel", "React", "MySQL", "REST API"],
@@ -128,7 +127,6 @@ export const PROJECTS: Project[] = [
     description: "Contributed to the backend REST API for a Flutter mobile tourism ticketing app.",
     problem: "Tourism ticket booking was still manual and needed a system that could be used through a mobile app.",
     solution: "Contributed to a Laravel REST API with Sanctum authentication for the Flutter mobile app, including QR payment (QR upload) and receipt printing from the app.",
-    // TODO-VERIFY: Confirm architecture details before publishing.
     architecture: "",
     highlights: ["Contributed to Sanctum authentication for the Flutter mobile app.", "Contributed to QR payment with QR upload.", "Contributed to receipt printing from the app.", "Backend was deployed to shared hosting."],
     stack: ["Laravel", "MySQL", "REST API", "Sanctum"],
@@ -144,7 +142,6 @@ export const PROJECTS: Project[] = [
     description: "A web-based examination system focused on exam reports and exporting scores to Excel.",
     problem: "Exam results need clear reports and score data needs to be exported for administration.",
     solution: "Built exam reports and Excel export for exam scores.",
-    // TODO-VERIFY: Confirm architecture details before publishing.
     architecture: "",
     highlights: ["Exam reports for reviewing participant results.", "Excel export for exam scores."],
     stack: ["Laravel", "React", "MySQL", "REST API", "Excel Export"],
@@ -188,7 +185,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
     { name: "Laravel", level: "Core", context: "REST API and web application development" },
     { name: "REST API", level: "Core", context: "API design and integration" },
     { name: "Authentication", level: "Core", context: "Authentication and access control" },
-    // TODO-VERIFY: Confirm RBAC as a skill before publishing.
     { name: "RBAC", level: "Familiar", context: "Role-based access control" },
   ] },
   { category: "AI", items: [
